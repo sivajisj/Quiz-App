@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
-    <title>Accessibility Quiz</title>
+    <title>Quizz App</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       
       <h1>HTML/CSS Quiz</h1>
+      <img src="./assets/sjlogo.png" alt="logo" id="logo" />
       <nav>
         <ul>
           <li><a href="#student-info">INFO</a></li>
@@ -19,8 +20,10 @@
         </ul>
       </nav>
     </header>
+
+
     <main>
-      
+  <form method='POST' action="https://getform.io/f/4be1fb25-f235-4cb1-a6bd-3e742f86094c">
         <section role="region" aria-labelledby="student-info">
           <h2 id="student-info">Student Info</h2>
           <div class="info">
@@ -36,8 +39,11 @@
             <input type="date" name="birth-date" id="birth-date" />
           </div>
         </section>
+
+        
         <section role="region" aria-labelledby="html-questions">
           <h2 id="html-questions">HTML</h2>
+
           <div class="question-block">
             <p>1</p>
             <fieldset class="question" name="html-question-one">
@@ -61,6 +67,8 @@
               </ul>
             </fieldset>
           </div>
+
+
           <div class="question-block">
             <p>2</p>
             <fieldset class="question" name="html-question-two">
@@ -84,13 +92,63 @@
               </ul>
             </fieldset>
           </div>
+
+          <div class="question-block">
+            <p>3</p>
+            <fieldset class="question" name="html-question-three">
+              <legend>
+                In HTML, inline elements do not start on a new line and only take up as much width as necessary.?
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q3-a1">
+                    <input type="radio" id="q3-a1" name="q3" value="true" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q3-a2">
+                    <input type="radio" id="q3-a2" name="q3" value="false" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+
         </section>
+
+
         <section role="region" aria-labelledby="css-questions">
           <h2 id="css-questions">CSS</h2>
-          <fieldset class="question" name="html-question-two">
+          <hr>
+          <p>1</p>
+          <fieldset class="question" name="css-question-one">
             <legend>
-              Bootstrap is the most used CSS frame work
+              The z-index property in CSS controls the vertical stacking order of elements that overlap.
             </legend>
+            <ul class="answers-list">
+              <li>
+                <label for="q1-a1">
+                  <input type="radio" id="q1-a1" name="q1" value="true" />
+                  True
+                </label>
+              </li>
+              <li>
+                <label for="q1-a2">
+                  <input type="radio" id="q1-a2" name="q1" value="false" />
+                  False
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+                
+          <hr>
+          <p>2</p>
+          <fieldset class="question" name="css-question-two">
+            <legend>
+              The !important rule in CSS can be used to override other style declarations.            </legend>
             <ul class="answers-list">
               <li>
                 <label for="q2-a1">
@@ -125,7 +183,7 @@
             </div>
           </div>
         </section>
-        <button type="submit">Submit</button>
+        <button type="submit" id="click">Submit</button>
       </form>
     </main>
     <footer>
